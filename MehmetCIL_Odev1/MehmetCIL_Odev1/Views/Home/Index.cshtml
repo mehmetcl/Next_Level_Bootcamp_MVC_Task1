@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="text-center">
+        @model List<Employee>
+
+        <table class="table table-bordered table-hover">
+            <caption>List of Employees</caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Model)
+                {
+                    <tr>
+                        <td>@employee.EmployeeId</td>
+                        <td>@employee.FirstName</td>
+                        <td>@employee.LastName</td>
+                        <td>@employee.Title</td>
+                        <td>
+                            <form action="/Home/Orders" method="post">
+                                <input type="hidden" name="employeeID" value="@employee.EmployeeId" />
+                                <button type="submit" class="btn btn-primary">List Orders</button>
+                            </form>
+                           <br/>
+                            <form action="/Home/DeleteEmployees" method="post">
+                                <input type="hidden" name="employeeID" value="@employee.EmployeeId" />
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <a href="/Home/Employee" class="btn btn-success">Add Employee</a>
+    </div>
+</div>

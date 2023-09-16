@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MehmetCIL_Odev1.props" />
+</Project>

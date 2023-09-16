@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MehmetCIL_Odev1.props" />
+</Project>
