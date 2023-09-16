@@ -1,4 +1,4 @@
-# Next_Level_Bootcamp_MVC_Task1
+# Next_Level_AspNetCore_Bootcamp_MVC_Task1
 Techcareer.net Bootcamp Task1
 İlk olarak çalışanların listelendiği ekran açılacak. Bu ekranda çalışanın adı, soyadı ve ünvanı yer alacak.
 Bu ekranda her çalışanın yanında Siparişler linki yer alacak
